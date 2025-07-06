@@ -9,6 +9,7 @@ body,
 html {
     height: 100vh;
     width: 100%;
+    overflow-y: auto;
     background-color: #f9f9f9;
     color: #333;
     display: flex;
@@ -23,27 +24,160 @@ html {
     height: 500px;
 }
 
-h1 {
+header h1 {
+    margin: 0 0 20px 0px;
     text-align: center;
-    color: #000274
+    color: #5833A6
 }
 
 header {
-    margin: 0 0 0.5rem 0;
     width: 100%;
-    background-color: #7953aa;
+    background-color: #141A26;
+    display: grid;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    grid-template-areas:
+        "web-title web-title"
+        "social-media main-nav";
+    flex-direction: column;
+    padding: 10px;
+}
+
+#web-title {
+    grid-area: web-title;
+}
+
+#main-nav {
+    grid-area: main-nav;
 }
 
 nav ul {
+    flex-direction: row;
     width: 100%;
-    height: 50px;
-    list-style: none;
-    margin: 10px 0;
     display: flex;
+    list-style: none;
     gap: 1rem;
-    padding: 10px 50px 0 50px;
+    justify-content: end;
+    align-items: center;
 }
 
 li {
-    color: black;
+    background-color: #2E3D59;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+li a {
+    color: #8679D9;
+
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #ffffff;
+}
+
+li:hover {
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+    color: #5833A6;
+}
+
+#social-media {
+    grid-area: social-media;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#social-media a {
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+
+#social-media img {
+    width: 20px;
+    height: auto;
+    filter: invert(1);
+    text-decoration: none;
+    margin: 5px;
+}
+
+article {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.contact-grid {
+
+    display: grid;
+    grid-template-areas:
+        "first-name last-name"
+        "email phone-number"
+        "message message"
+        "submit submit";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+#first-name {
+    grid-area: first-name;
+
+}
+
+#last-name {
+    grid-area: last-name;
+
+}
+
+#email {
+    grid-area: email;
+
+}
+
+#phone-number {
+    grid-area: phone-number;
+
+}
+
+#message {
+    grid-area: message;
+    height: 300px;
+}
+
+#submit {
+    grid-area: submit;
+    outline: none;
+}
+
+input,
+textarea {
+    outline: none;
+    resize: none;
 }
