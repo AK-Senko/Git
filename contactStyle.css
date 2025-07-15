@@ -1,0 +1,61 @@
+form {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    filter: invert(1);
+}
+
+.contact-grid {
+
+    display: grid;
+    grid-template-areas:
+        "first-name last-name"
+        "email phone-number"
+        "message message"
+        "submit submit";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+#first-name {
+    grid-area: first-name;
+
+}
+
+#last-name {
+    grid-area: last-name;
+
+}
+
+#email {
+    grid-area: email;
+
+}
+
+#phone-number {
+    grid-area: phone-number;
+
+}
+
+#message {
+    grid-area: message;
+    height: 300px;
+}
+
+#submit {
+    grid-area: submit;
+    outline: none;
+}
+
+input,
+textarea {
+    outline: none;
+    resize: none;
+    padding: 5px;
+}
