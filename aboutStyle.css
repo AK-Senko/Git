@@ -1,0 +1,33 @@
+.aboutMe {
+    background-color: #141A26;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+}
+
+p {
+    color: #d4d4d4;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.aboutMe h1 {
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+    color: #d4d4d4;
+}
+
+a img {
+    margin: 10px 0 0 0;
+    width: 50px;
+    height: auto;
+    filter: invert(1);
+}
+
+a img:hover {
+    filter: invert(0.5);
+    transform: scale(1.3);
+}
